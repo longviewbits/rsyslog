@@ -1,13 +1,13 @@
 name             'rsyslog'
-maintainer       'LLC Express 42'
-maintainer_email 'cookbooks@express42.com'
+maintainer       'Long View Bits'
+maintainer_email 'aaron@longviewbits.com'
 license          'MIT'
 description      'Installs and configures rsyslog. Provides LWRP for creating rules.'
-version          '0.0.6'
-issues_url       'https://github.com/express42-cookbooks/rsyslog/issues'
-source_url       'https://github.com/express42-cookbooks/rsyslog'
+version          '0.0.7'
+issues_url       'https://github.com/longviewbits/rsyslog/issues'
+source_url       'https://github.com/longviewbits/rsyslog'
 
 recipe           'rsyslog::default', 'Installs and configures rsyslog.'
-recipe           'rsyslog::apt_official_repo', 'Setup official ppa rsyslog repository with latest stable version'
+recipe           'rsyslog::yum_official_repo', 'Setup official yum rsyslog repository with latest stable version'
 
-supports         'ubuntu'
+supports         %w(ubuntu redhat)
